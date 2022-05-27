@@ -1,0 +1,482 @@
+Microsoft Windows [Version 10.0.19042.867]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+D:\SilicoNexus\nRF_Mbed>git clone https://github.com/ARMmbed/mbed-os
+Cloning into 'mbed-os'...
+remote: Enumerating objects: 537, done.
+remote: Counting objects: 100% (537/537), done.
+remote: Compressing objects: 100% (323/323), done.
+remote: Total 400953 (delta 266), reused 377 (delta 211), pack-reused 400416
+Receiving objects: 100% (400953/400953), 428.03 MiB | 664.00 KiB/s, done.
+Resolving deltas: 100% (279969/279969), done.
+Updating files: 100% (17193/17193), done.
+warning: the following paths have collided (e.g. case-sensitive paths
+on a case-insensitive filesystem) and only one from the same
+colliding group is in the working tree:
+
+  'targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F401xE/TOOLCHAIN_GCC_ARM/STM32F401XE.ld'
+  'targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F401xE/TOOLCHAIN_GCC_ARM/stm32f401xe.ld'
+
+D:\SilicoNexus\nRF_Mbed>git pull
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\SilicoNexus\nRF_Mbed>cd mbed-os
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>git pull
+Already up to date.
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>git branch
+* master
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>git branch -r
+  origin/5.15.2
+  origin/9816-online-gcc-export
+  origin/HEAD -> origin/master
+  origin/cmake-remove-debug-print
+  origin/dev_usb_remove_mbedh
+  origin/docs-fpga
+  origin/evaluate
+  origin/examples-5.15
+  origin/feature-bluetooth-unit-test
+  origin/feature-chip
+  origin/feature-cmake
+  origin/feature-cmake-object-libraries
+  origin/feature-cpuid
+  origin/feature-hal-spec-sai
+  origin/feature-hal-spec-spi
+  origin/feature-hal-spec-usb-device
+  origin/feature-i2c
+  origin/feature-lorawan-1-1
+  origin/feature-nrf52-low-power-ble
+  origin/feature-rtc-alarm
+  origin/feature-sdio
+  origin/feature-secure-time
+  origin/feature-std-pin-name
+  origin/feature-tf-m-1.2-integration
+  origin/feature-wisun
+  origin/feature_drivers_unittest_cmake
+  origin/feature_storage_fixes
+  origin/feature_twincpu
+  origin/feature_unittest_refactor
+  origin/latest
+  origin/master
+  origin/master-testing
+  origin/mbed-os-5.1
+  origin/mbed-os-5.10
+  origin/mbed-os-5.11
+  origin/mbed-os-5.12
+  origin/mbed-os-5.13
+  origin/mbed-os-5.14
+  origin/mbed-os-5.15
+  origin/mbed-os-5.15.3-rc1
+  origin/mbed-os-5.2
+  origin/mbed-os-5.3
+  origin/mbed-os-5.4
+  origin/mbed-os-5.5
+  origin/mbed-os-5.6
+  origin/mbed-os-5.7
+  origin/mbed-os-5.8
+  origin/mbed-os-5.9
+  origin/mbed-os-workshop-17q2
+  origin/mergify/bp/mbed-os-5.15/pr-12705
+  origin/pr_template
+  origin/qspi-fix
+  origin/release-candidate
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>git checkout mbed-os-5.15
+Updating files: 100% (27484/27484), done.
+Switched to a new branch 'mbed-os-5.15'
+Branch 'mbed-os-5.15' set up to track remote branch 'mbed-os-5.15' from 'origin'.
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>mbed --support list
+usage: mbed [-h] [--version]             ...
+mbed: error: argument            : invalid choice: 'list' (choose from 'new', 'import', 'im', 'imp', 'add', 'ad', 'remove', 'rm', 'rem', 'deploy', 'publish', 'pub', 'update', 'up', 'sync', 'ls', 'releases', 'rel', 'rels', 'status', 'st', 'stat', 'compile', 'test', 'device-management', 'dev-mgmt', 'dm', 'export', 'detect', 'det', 'sterm', 'term', 'config', 'cfg', 'conf', 'target', 'toolchain', 'cache', 'help')
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>mbed --help
+usage: mbed [-h] [--version]             ...
+
+Command-line code management tool for ARM mbed OS - http://www.mbed.com
+version 1.8.3
+
+Use "mbed <command> -h|--help" for detailed help.
+Online manual and guide available at https://github.com/ARMmbed/mbed-cli
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --version          print version number and exit
+
+Commands:
+
+    new              Create new mbed program or library
+    import           Import program from URL
+    add              Add library from URL
+    remove           Remove library
+    deploy           Find and add missing libraries
+    publish          Publish program or library
+    update           Update to branch, tag, revision or latest
+    sync             Synchronize library references
+
+    ls               View dependency tree
+    releases         Show release tags
+    status           Show version control status
+
+    compile          Compile code using the mbed build tools
+    test             Find, build and run tests
+    device-management
+                     device management supcommand
+    export           Generate an IDE project
+    detect           Detect connected Mbed targets/boards
+
+    sterm            Open serial terminal to connected target.
+
+    config           Tool configuration
+    target           Set or get default target
+    toolchain        Set or get default toolchain
+    cache            Repository cache management
+
+    help             This help screen
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>mbed supported
+usage: mbed [-h] [--version]             ...
+mbed: error: argument            : invalid choice: 'supported' (choose from 'new', 'import', 'im', 'imp', 'add', 'ad', 'remove', 'rm', 'rem', 'deploy', 'publish', 'pub', 'update', 'up', 'sync', 'ls', 'releases', 'rel', 'rels', 'status', 'st', 'stat', 'compile', 'test', 'device-management', 'dev-mgmt', 'dm', 'export', 'detect', 'det', 'sterm', 'term', 'config', 'cfg', 'conf', 'target', 'toolchain', 'cache', 'help')
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>mbed supported --list
+usage: mbed [-h] [--version]             ...
+mbed: error: argument            : invalid choice: 'supported' (choose from 'new', 'import', 'im', 'imp', 'add', 'ad', 'remove', 'rm', 'rem', 'deploy', 'publish', 'pub', 'update', 'up', 'sync', 'ls', 'releases', 'rel', 'rels', 'status', 'st', 'stat', 'compile', 'test', 'device-management', 'dev-mgmt', 'dm', 'export', 'detect', 'det', 'sterm', 'term', 'config', 'cfg', 'conf', 'target', 'toolchain', 'cache', 'help')
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>mbed compile --supported
+[mbed] Working path "D:\SilicoNexus\nRF_Mbed\mbed-os" (program)
+[mbed] WARNING: Could not find mbed program in current path "D:\SilicoNexus\nRF_Mbed\mbed-os".
+       You can fix this by calling "mbed new ." in the root of your program.
+---
+[mbed] Auto-installing missing Python modules (colorama, urllib3, prettytable, junit_xml, pyyaml, jsonschema, future, six, mbed_cloud_sdk, requests, idna, pyserial, jinja2, intelhex, mbed_ls, mbed_host_tests, mbed_greentea, beautifulsoup4, pyelftools, manifest_tool, icetea, pycryptodome, pyusb, hidapi, cmsis_pack_manager, pywin32, wmi, psutil, cryptography, click)...
+[mbed] WARNING: Unable to auto-install required Python modules.
+       The mbed OS tools in this program require the following Python modules: colorama, urllib3, prettytable, junit_xml, pyyaml, jsonschema, future, six, mbed_cloud_sdk, requests, idna, pyserial, jinja2, intelhex, mbed_ls, mbed_host_tests, mbed_greentea, beautifulsoup4, pyelftools, manifest_tool, icetea, pycryptodome, pyusb, hidapi, cmsis_pack_manager, pywin32, wmi, psutil, cryptography, click
+       You can install all missing modules by running "pip install -r requirements.txt" in "D:\SilicoNexus\nRF_Mbed\mbed-os"
+---
+Traceback (most recent call last):
+  File "D:\SilicoNexus\nRF_Mbed\mbed-os\tools\make.py", line 22, in <module>
+    from builtins import str
+ImportError: No module named builtins
+[mbed] ERROR: "C:\Python27\python.exe" returned error.
+       Code: 1
+       Path: "D:\SilicoNexus\nRF_Mbed\mbed-os"
+       Command: "C:\Python27\python.exe -u D:\SilicoNexus\nRF_Mbed\mbed-os\tools\make.py -S"
+       Tip: You could retry the last command with "-v" flag for verbose output
+---
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>pip --version
+pip 9.0.1 from c:\python27\lib\site-packages (python 2.7)
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>pip install -r requirements.txt
+Collecting colorama==0.3.9 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/db/c8/7dcf9dbcb22429512708fe3a547f8b6101c0d02137acbd892505aee57adf/colorama-0.3.9-py2.py3-none-any.whl
+Collecting urllib3[secure]==1.24.2 (from -r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/df/1c/59cca3abf96f991f2ec3131a4ffe72ae3d9ea1f5894abe8a9c5e3c77cfee/urllib3-1.24.2-py2.py3-none-any.whl
+Collecting prettytable==0.7.2 (from -r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/ef/30/4b0746848746ed5941f052479e7c23d2b56d174b82f4fd34a25e389831f5/prettytable-0.7.2.tar.bz2
+Collecting junit-xml==1.8 (from -r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/a6/2a/f8d5aab80bb31fcc789d0f2b34b49f08bd6121cd8798d2e37f416df2b9f8/junit-xml-1.8.tar.gz
+Collecting pyyaml==4.2b1 (from -r requirements.txt (line 5))
+  Using cached https://files.pythonhosted.org/packages/bd/da/0a49c1a31c60634b93fd1376b3b7966c4f81f2da8263f389cad5b6bbd6e8/PyYAML-4.2b1.tar.gz
+Collecting jsonschema==2.6.0 (from -r requirements.txt (line 6))
+  Using cached https://files.pythonhosted.org/packages/77/de/47e35a97b2b05c2fadbec67d44cfcdcd09b8086951b331d82de90d2912da/jsonschema-2.6.0-py2.py3-none-any.whl
+Collecting future<1.0,>=0.18.0 (from -r requirements.txt (line 7))
+  Using cached https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz
+Collecting six==1.12.0 (from -r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Collecting mbed-cloud-sdk<2.1,>=2.0.6 (from -r requirements.txt (line 9))
+  Using cached https://files.pythonhosted.org/packages/50/34/4bc3b0efe5d4cb56fba71535ef16c607f7ce125d80841a3e2b2e9962df44/mbed_cloud_sdk-2.0.8-py2.py3-none-any.whl
+Collecting requests<2.21,>=2.20 (from -r requirements.txt (line 10))
+  Using cached https://files.pythonhosted.org/packages/ff/17/5cbb026005115301a8fb2f9b0e3e8d32313142fe8b617070e7baad20554f/requests-2.20.1-py2.py3-none-any.whl
+Collecting idna<2.8,>=2 (from -r requirements.txt (line 11))
+  Using cached https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl
+Collecting pyserial<=3.4,>=3 (from -r requirements.txt (line 12))
+  Using cached https://files.pythonhosted.org/packages/0d/e4/2a744dd9e3be04a0c0907414e2a01a7c88bb3915cbe3c8cc06e209f59c30/pyserial-3.4-py2.py3-none-any.whl
+Collecting Jinja2<2.11,>=2.10.1 (from -r requirements.txt (line 13))
+  Using cached https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl
+Collecting intelhex<=2.2.1,>=1.3 (from -r requirements.txt (line 14))
+  Using cached https://files.pythonhosted.org/packages/bf/77/bf670318b3db325c71e2ac6a90b7bcfdf9fc739b7cf6aebb31715721623e/intelhex-2.2.1-py2.py3-none-any.whl
+Collecting mbed-ls<1.8,>=1.5.1 (from -r requirements.txt (line 15))
+  Using cached https://files.pythonhosted.org/packages/94/5a/19974a30c6928df0e774c290ce75394cec10478b0d8efa0d1e088fca8213/mbed-ls-1.7.12.tar.gz
+Collecting mbed-host-tests<1.6,>=1.4.4 (from -r requirements.txt (line 16))
+  Using cached https://files.pythonhosted.org/packages/7f/94/1e727eb5955341a23ac892326ef3d8c1544202b13453f57c09d48e78b307/mbed_host_tests-1.5.10-py2.py3-none-any.whl
+Collecting mbed-greentea<1.8,>=0.2.24 (from -r requirements.txt (line 17))
+  Using cached https://files.pythonhosted.org/packages/85/9f/8336a68476298eabdd405123ebbfec802f71a89610f52e92d52fcfaf30ea/mbed_greentea-1.7.4-py2.py3-none-any.whl
+Collecting beautifulsoup4<=4.6.3,>=4 (from -r requirements.txt (line 18))
+  Using cached https://files.pythonhosted.org/packages/f8/c7/741c97d7366f4779ca73d244904978b43a81fd37d85fcf05ad19d472c1ce/beautifulsoup4-4.6.3-py2-none-any.whl
+Collecting pyelftools<=0.25,>=0.24 (from -r requirements.txt (line 19))
+  Using cached https://files.pythonhosted.org/packages/b8/45/00776dc25dc2ad0573d48c2d86f2d4a554216d00bf4575423557f5a398ca/pyelftools-0.25-py2.py3-none-any.whl
+Collecting manifest-tool==1.5.2 (from -r requirements.txt (line 20))
+  Using cached https://files.pythonhosted.org/packages/ea/df/59413d8b568514730c718a251bdf140ce3d32aeb5c1ac512d6f9507d2a44/manifest-tool-1.5.2.tar.gz
+Collecting icetea<1.3,>=1.2.1 (from -r requirements.txt (line 21))
+  Using cached https://files.pythonhosted.org/packages/3d/31/e073803d4e1967dabb40663d18b33453270c24e01382e2d0726cc7269109/icetea-1.2.4.tar.gz
+Collecting pycryptodome<=3.7.3,>=3.7.2 (from -r requirements.txt (line 22))
+  Using cached https://files.pythonhosted.org/packages/77/c7/f058abdeabf56a6213326083800a37299f0c00809c1851c93a2e89b03c18/pycryptodome-3.7.3-cp27-cp27m-win32.whl
+Collecting pyusb<2.0.0,>=1.0.0 (from -r requirements.txt (line 23))
+  Using cached https://files.pythonhosted.org/packages/b9/8d/25c4e446a07e918eb39b5af25c4a83a89db95ae44e4ed5a46c3c53b0a4d6/pyusb-1.1.1.tar.gz
+    Complete output from command python setup.py egg_info:
+    c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\src
+    <pkg_resources.WorkingSet object at 0x0453F190>
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "c:\users\dell\appdata\local\temp\pip-build-zvjw53\pyusb\setup.py", line 117, in <module>
+        'Topic :: System :: Hardware :: Hardware Drivers'
+      File "c:\python27\lib\distutils\core.py", line 111, in setup
+        _setup_distribution = dist = klass(attrs)
+      File "c:\python27\lib\site-packages\setuptools\dist.py", line 315, in __init__
+        self.fetch_build_eggs(attrs['setup_requires'])
+      File "c:\python27\lib\site-packages\setuptools\dist.py", line 361, in fetch_build_eggs
+        replace_conflicting=True,
+      File "c:\python27\lib\site-packages\pkg_resources\__init__.py", line 850, in resolve
+        dist = best[req.key] = env.best_match(req, ws, installer)
+      File "c:\python27\lib\site-packages\pkg_resources\__init__.py", line 1122, in best_match
+        return self.obtain(req, installer)
+      File "c:\python27\lib\site-packages\pkg_resources\__init__.py", line 1134, in obtain
+        return installer(requirement)
+      File "c:\python27\lib\site-packages\setuptools\dist.py", line 429, in fetch_build_egg
+        return cmd.easy_install(req)
+      File "c:\python27\lib\site-packages\setuptools\command\easy_install.py", line 665, in easy_install
+        return self.install_item(spec, dist.location, tmpdir, deps)
+      File "c:\python27\lib\site-packages\setuptools\command\easy_install.py", line 695, in install_item
+        dists = self.install_eggs(spec, download, tmpdir)
+      File "c:\python27\lib\site-packages\setuptools\command\easy_install.py", line 876, in install_eggs
+        return self.build_and_install(setup_script, setup_base)
+      File "c:\python27\lib\site-packages\setuptools\command\easy_install.py", line 1115, in build_and_install
+        self.run_setup(setup_script, setup_base, args)
+      File "c:\python27\lib\site-packages\setuptools\command\easy_install.py", line 1101, in run_setup
+        run_setup(setup_script, args)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 251, in run_setup
+        raise
+      File "c:\python27\lib\contextlib.py", line 35, in __exit__
+        self.gen.throw(type, value, traceback)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 198, in setup_context
+        yield
+      File "c:\python27\lib\contextlib.py", line 35, in __exit__
+        self.gen.throw(type, value, traceback)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 169, in save_modules
+        saved_exc.resume()
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 144, in resume
+        six.reraise(type, exc, self._tb)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 157, in save_modules
+        yield saved
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 198, in setup_context
+        yield
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 248, in run_setup
+        DirectorySandbox(setup_dir).run(runner)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 278, in run
+        return func()
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 246, in runner
+        _execfile(setup_script, ns)
+      File "c:\python27\lib\site-packages\setuptools\sandbox.py", line 47, in _execfile
+        exec(code, globals, locals)
+      File "c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\setup.py", line 52, in <module>
+        return local_scheme
+      File "c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\setup.py", line 29, in scm_config
+        # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+      File "c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\src\setuptools_scm\__init__.py", line 8, in <module>
+      File "c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\src\setuptools_scm\config.py", line 6, in <module>
+      File "c:\users\dell\appdata\local\temp\easy_install-mmdmbl\setuptools_scm-6.0.1\src\setuptools_scm\utils.py", line 41
+        print(*k)
+              ^
+    SyntaxError: invalid syntax
+
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in c:\users\dell\appdata\local\temp\pip-build-zvjw53\pyusb\
+You are using pip version 9.0.1, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>python -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/27/79/8a850fe3496446ff0d584327ae44e7500daf6764ca1a382d2d02789accf7/pip-20.3.4-py2.py3-none-any.whl (1.5MB)
+    100% |################################| 1.5MB 193kB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-20.3.4
+You are using pip version 20.3.4, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>python -m pip install --upgrade pip
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Requirement already up-to-date: pip in c:\python27\lib\site-packages (20.3.4)
+
+D:\SilicoNexus\nRF_Mbed\mbed-os>pip install -r requirements.txt
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting colorama==0.3.9
+  Using cached colorama-0.3.9-py2.py3-none-any.whl (20 kB)
+Collecting urllib3[secure]==1.24.2
+  Using cached urllib3-1.24.2-py2.py3-none-any.whl (131 kB)
+Collecting prettytable==0.7.2
+  Using cached prettytable-0.7.2.tar.bz2 (21 kB)
+Collecting junit-xml==1.8
+  Using cached junit-xml-1.8.tar.gz (10.0 kB)
+Collecting pyyaml==4.2b1
+  Using cached PyYAML-4.2b1.tar.gz (263 kB)
+Collecting jsonschema==2.6.0
+  Using cached jsonschema-2.6.0-py2.py3-none-any.whl (39 kB)
+Collecting future<1.0,>=0.18.0
+  Using cached future-0.18.2.tar.gz (829 kB)
+Collecting six==1.12.0
+  Using cached six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting mbed-cloud-sdk<2.1,>=2.0.6
+  Using cached mbed_cloud_sdk-2.0.8-py2.py3-none-any.whl (786 kB)
+Collecting requests<2.21,>=2.20
+  Using cached requests-2.20.1-py2.py3-none-any.whl (57 kB)
+Collecting idna<2.8,>=2
+  Using cached idna-2.7-py2.py3-none-any.whl (58 kB)
+Collecting pyserial<=3.4,>=3
+  Using cached pyserial-3.4-py2.py3-none-any.whl (193 kB)
+Collecting Jinja2<2.11,>=2.10.1
+  Using cached Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting intelhex<=2.2.1,>=1.3
+  Using cached intelhex-2.2.1-py2.py3-none-any.whl (50 kB)
+Collecting mbed-ls<1.8,>=1.5.1
+  Using cached mbed-ls-1.7.12.tar.gz (174 kB)
+Collecting mbed-host-tests<1.6,>=1.4.4
+  Using cached mbed_host_tests-1.5.10-py2.py3-none-any.whl (61 kB)
+Collecting mbed-greentea<1.8,>=0.2.24
+  Using cached mbed_greentea-1.7.4-py2.py3-none-any.whl (57 kB)
+Collecting beautifulsoup4<=4.6.3,>=4
+  Using cached beautifulsoup4-4.6.3-py2-none-any.whl (90 kB)
+Collecting pyelftools<=0.25,>=0.24
+  Using cached pyelftools-0.25-py2.py3-none-any.whl (126 kB)
+Collecting manifest-tool==1.5.2
+  Using cached manifest-tool-1.5.2.tar.gz (54 kB)
+Collecting icetea<1.3,>=1.2.1
+  Using cached icetea-1.2.4.tar.gz (154 kB)
+Collecting pycryptodome<=3.7.3,>=3.7.2
+  Using cached pycryptodome-3.7.3-cp27-cp27m-win32.whl (7.9 MB)
+Collecting pyusb<2.0.0,>=1.0.0
+  Using cached pyusb-1.1.1.tar.gz (74 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+    Preparing wheel metadata ... done
+Collecting hidapi<0.8.0,>=0.7.99
+  Downloading hidapi-0.7.99.post21-cp27-cp27m-win32.whl (21 kB)
+Collecting cmsis-pack-manager<0.3.0,>=0.2.3
+  Downloading cmsis_pack_manager-0.2.10-py2.py3-none-win32.whl (2.3 MB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 2.3 MB 196 kB/s
+Collecting pywin32==224
+  Downloading pywin32-224-cp27-cp27m-win32.whl (6.8 MB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 6.8 MB 424 kB/s
+Collecting wmi==1.4.9
+  Downloading WMI-1.4.9.zip (26 kB)
+Collecting psutil==5.6.2
+  Downloading psutil-5.6.2-cp27-none-win32.whl (226 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 226 kB 890 kB/s
+Collecting cryptography<3,>=2.5
+  Downloading cryptography-2.9.2-cp27-cp27m-win32.whl (1.3 MB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 1.3 MB 664 kB/s
+Collecting Click<7.1,>=7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 81 kB 872 kB/s
+Collecting ipaddress; python_version == "2.7" and extra == "secure"
+  Downloading ipaddress-1.0.23-py2.py3-none-any.whl (18 kB)
+Collecting pyOpenSSL>=0.14; python_version == "2.7" and extra == "secure"
+  Downloading pyOpenSSL-20.0.1-py2.py3-none-any.whl (54 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 54 kB 611 kB/s
+Collecting certifi; extra == "secure"
+  Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 147 kB 669 kB/s
+Collecting functools32; python_version == "2.7"
+  Downloading functools32-3.2.3-2.tar.gz (31 kB)
+Collecting python-dotenv>=0.8.2
+  Downloading python_dotenv-0.17.0-py2.py3-none-any.whl (18 kB)
+Collecting python-dateutil>=2
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 227 kB 882 kB/s
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 133 kB 775 kB/s
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1-cp27-cp27m-win32.whl (14 kB)
+Collecting mbed-os-tools<0.1.0,>=0.0.9
+  Downloading mbed-os-tools-0.0.15.tar.gz (286 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 286 kB 781 kB/s
+  Ignoring lxml: markers 'sys_platform == "darwin"' don't match your environment
+Collecting ecdsa>=0.13
+  Downloading ecdsa-0.16.1-py2.py3-none-any.whl (104 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 104 kB 1.0 MB/s
+Collecting pyasn1<0.3.0,>=0.2.1
+  Downloading pyasn1-0.2.3-py2.py3-none-any.whl (53 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 53 kB 542 kB/s
+Collecting asn1ate>=0.5
+  Downloading asn1ate-0.6.0.tar.gz (24 kB)
+Collecting pyparsing>=2.1.0
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 67 kB 893 kB/s
+Collecting protobuf<3.6.0,>=3.5.0
+  Downloading protobuf-3.5.2.post1-cp27-cp27m-win32.whl (793 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 793 kB 975 kB/s
+Collecting yattag>=1.0
+  Downloading yattag-1.14.0.tar.gz (26 kB)
+Collecting jsonmerge>=1.4
+  Downloading jsonmerge-1.8.0.tar.gz (26 kB)
+Collecting semver>=2.0
+  Downloading semver-2.13.0-py2.py3-none-any.whl (12 kB)
+Collecting mbed-flasher<0.11,>=0.10.1
+  Downloading mbed-flasher-0.10.1.tar.gz (38 kB)
+Requirement already satisfied: setuptools>=19.0 in c:\python27\lib\site-packages (from hidapi<0.8.0,>=0.7.99->-r requirements.txt (line 24)) (28.8.0)
+Collecting appdirs>=1.4
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Collecting milksnake>=0.1.2
+  Downloading milksnake-0.1.5-py2.py3-none-any.whl (9.6 kB)
+Collecting enum34; python_version < "3"
+  Downloading enum34-1.1.10-py2-none-any.whl (11 kB)
+Collecting cffi!=1.11.3,>=1.8
+  Downloading cffi-1.14.5-cp27-cp27m-win32.whl (162 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 162 kB 957 kB/s
+Collecting typing; python_version < "3.5"
+  Downloading typing-3.7.4.3-py2-none-any.whl (26 kB)
+Collecting soupsieve<2.0
+  Downloading soupsieve-1.9.6-py2.py3-none-any.whl (33 kB)
+Collecting fasteners
+  Downloading fasteners-0.16-py2.py3-none-any.whl (28 kB)
+Collecting lockfile
+  Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Collecting pycparser
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+     |UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU| 112 kB 882 kB/s
+Collecting backports.functools-lru-cache; python_version < "3"
+  Downloading backports.functools_lru_cache-1.6.3-py2.py3-none-any.whl (5.9 kB)
+Collecting monotonic>=0.1; python_version < "3.4"
+  Downloading monotonic-1.6-py2.py3-none-any.whl (8.2 kB)
+Using legacy 'setup.py install' for prettytable, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for junit-xml, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for pyyaml, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for future, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for mbed-ls, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for manifest-tool, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for icetea, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for wmi, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for functools32, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for mbed-os-tools, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for asn1ate, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for yattag, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for jsonmerge, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for mbed-flasher, since package 'wheel' is not installed.
+Building wheels for collected packages: pyusb
+  Building wheel for pyusb (PEP 517) ... done
+  Created wheel for pyusb: filename=pyusb-1.1.1-py2-none-any.whl size=58069 sha256=44224d9cb11f1202a3568d19636a1ad5af7ec5eb507205fbf5919b81898a390b
+  Stored in directory: c:\users\dell\appdata\local\pip\cache\wheels\3a\8f\92\fbf127fcc393d9ae11cdc66adbef53b5b525b4e553a244257c
+Successfully built pyusb
+Installing collected packages: colorama, idna, ipaddress, six, enum34, pycparser, cffi, cryptography, pyOpenSSL, certifi, urllib3, prettytable, junit-xml, pyyaml, functools32, jsonschema, future, typing, python-dotenv, python-dateutil, chardet, requests, mbed-cloud-sdk, pyserial, MarkupSafe, Jinja2, intelhex, backports.functools-lru-cache, soupsieve, monotonic, fasteners, appdirs, lockfile, beautifulsoup4, mbed-os-tools, mbed-ls, mbed-host-tests, mbed-greentea, pyelftools, ecdsa, pyasn1, pyparsing, asn1ate, protobuf, manifest-tool, yattag, jsonmerge, semver, mbed-flasher, icetea, pycryptodome, pyusb, hidapi, milksnake, cmsis-pack-manager, pywin32, wmi, psutil, Click
+    Running setup.py install for prettytable ... done
+    Running setup.py install for junit-xml ... done
+    Running setup.py install for pyyaml ... done
+    Running setup.py install for functools32 ... done
+    Running setup.py install for future ... done
+    Running setup.py install for mbed-os-tools ... done
+    Running setup.py install for mbed-ls ... done
+    Running setup.py install for asn1ate ... done
+    Running setup.py install for manifest-tool ... done
+    Running setup.py install for yattag ... done
+    Running setup.py install for jsonmerge ... done
+    Running setup.py install for mbed-flasher ... done
+    Running setup.py install for icetea ... done
+    Running setup.py install for wmi ... done
+ERROR: pip's legacy dependency resolver does not consider dependency conflicts when selecting packages. This behaviour is the source of the following dependency conflicts.
+pyopenssl 20.0.1 requires cryptography>=3.2, but you'll have cryptography 2.9.2 which is incompatible.
+Successfully installed Click-7.0 Jinja2-2.10.3 MarkupSafe-1.1.1 appdirs-1.4.4 asn1ate-0.6.0 backports.functools-lru-cache-1.6.3 beautifulsoup4-4.6.3 certifi-2020.12.5 cffi-1.14.5 chardet-3.0.4 cmsis-pack-manager-0.2.10 colorama-0.3.9 cryptography-2.9.2 ecdsa-0.16.1 enum34-1.1.10 fasteners-0.16 functools32-3.2.3.post2 future-0.18.2 hidapi-0.7.99.post21 icetea-1.2.4 idna-2.7 intelhex-2.2.1 ipaddress-1.0.23 jsonmerge-1.8.0 jsonschema-2.6.0 junit-xml-1.8 lockfile-0.12.2 manifest-tool-1.5.2 mbed-cloud-sdk-2.0.8 mbed-flasher-0.10.1 mbed-greentea-1.7.4 mbed-host-tests-1.5.10 mbed-ls-1.7.12 mbed-os-tools-0.0.15 milksnake-0.1.5 monotonic-1.6 prettytable-0.7.2 protobuf-3.5.2.post1 psutil-5.6.2 pyOpenSSL-20.0.1 pyasn1-0.2.3 pycparser-2.20 pycryptodome-3.7.3 pyelftools-0.25 pyparsing-2.4.7 pyserial-3.4 python-dateutil-2.8.1 python-dotenv-0.17.0 pyusb-1.1.1 pywin32-224 pyyaml-4.2b1 requests-2.20.1 semver-2.13.0 six-1.12.0 soupsieve-1.9.6 typing-3.7.4.3 urllib3-1.24.2 wmi-1.4.9 yattag-1.14.0
